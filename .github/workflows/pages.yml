@@ -70,9 +70,9 @@ jobs:
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Run linter 👀
+      - name: Run linter
         run: ${{ steps.detect-package-manager.outputs.manager }} lint
-      - name: Run tests 🧪
+      - name: Run tests
         run: ${{ steps.detect-package-manager.outputs.manager }} test
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
@@ -83,7 +83,7 @@ jobs:
 
   # Deployment job
   deploy:
-    environment:
+    environment:  
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
