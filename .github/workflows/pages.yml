@@ -50,10 +50,10 @@ jobs:
       - name: Run tests 🧪
         run: yarn test
 
-      - name: Run Generate
-        run: yarn generate
+      - name: Generate
+        run: yarn run generate
 
-      -name: Deploy
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
