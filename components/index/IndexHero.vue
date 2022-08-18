@@ -1,5 +1,7 @@
 <template>
-  <div class="hero">Hello world!</div>
+  <div class="hero">
+    <h1>Hello world!</h1>
+  </div>
 </template>
 
 <script lang="ts">
