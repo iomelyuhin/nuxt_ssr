@@ -46,7 +46,7 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
@@ -71,7 +71,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Run linter
-        run: yarn lint
+        run: yarn test
       - name: Static HTML export with Nuxt
         run: ${{ steps.detect-package-manager.outputs.manager }} run generate
       - name: Upload artifact
