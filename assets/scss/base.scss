@@ -67,3 +67,13 @@ h6 {
   font-weight: normal;
   margin: 0;
 }
+
+.container {
+  max-width: 1600px;
+  width: 100%;
+  padding: 20px 30px;
+  
+  @include phones {
+    padding: 10px;
+  }
+}

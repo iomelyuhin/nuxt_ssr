@@ -1,0 +1,56 @@
+//Create mixins for media
+$bp-desktop-hd: "1800px";
+$bp-desktop: "1440px";
+$bp-laptop: "1080px";
+$bp-tablets: "768px";
+$bp-phones: "480px";
+$bp-phones-mini: "320px";
+
+
+//Media
+@mixin custom($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+@mixin tv() {
+  @media screen and (min-width: $bp-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin desktopHd() {
+  @media screen and (max-width: $bp-desktop-hd) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (max-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin laptop() {
+  @media screen and (max-width: $bp-laptop) {
+    @content;
+  }
+}
+
+@mixin tablets() {
+  @media screen and (max-width: $bp-tablets) {
+    @content;
+  }
+}
+
+@mixin phones() {
+  @media screen and (max-width: $bp-phones) {
+    @content;
+  }
+}
+
+@mixin phonesMini() {
+  @media screen and (max-width: $bp-phones-mini) {
+    @content;
+  }
+}
