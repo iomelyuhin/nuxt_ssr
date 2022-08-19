@@ -1,14 +1,17 @@
 <template>
-  <div class="hero">
-    <h1 class="hero__title">{{ $t("Hello world") }}!!!</h1>
+  <div class="wrapper">
+    <AppHeader />
+    <Nuxt />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import AppHeader from '../components/App/AppHeader.vue'
 
 export default Vue.extend({
   name: 'IndexPage',
+  components: { AppHeader },
 })
 </script>
 

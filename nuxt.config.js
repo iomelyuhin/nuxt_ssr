@@ -29,11 +29,12 @@ export default {
     scss: ["~/assets/scss/*.scss"],
   },
 
+  components: false,
+
+  modern: true,
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -47,7 +48,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    "@nuxtjs/style-resources"
+    "@nuxtjs/style-resources",
+    "@nuxtjs/i18n",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -63,4 +65,29 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  i18n: {
+    // https://i18n.nuxtjs.org/basic-usage
+    vueI18nLoader: true,
+    strategy: "prefix_and_default",
+    defaultLocale: "en",
+    lazy: true,
+    langDir: "i18n",
+    vueI18n: {
+      fallbackLocale: "en",
+    },
+    locales: [
+      {
+        code: "ru",
+        name: "Русский",
+        file: "ru.json",
+      },
+      {
+        code: "en",
+        name: "English",
+        file: "en.json",
+      },
+    ],
+    silentTranslationWarn: true,
+    silentFallbackWarn: true,
+  },
 }
