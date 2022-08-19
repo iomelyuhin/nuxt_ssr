@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <h1>Hello world!!!</h1>
+    <h1 class="hero__title">Hello world!!!</h1>
   </div>
 </template>
 
@@ -11,3 +11,9 @@ export default Vue.extend({
   name: 'IndexPage',
 })
 </script>
+
+<style lang="scss" scoped>
+.hero__title {
+  @include h1;
+}
+</style>

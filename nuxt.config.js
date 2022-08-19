@@ -22,7 +22,12 @@ export default {
     "~/assets/scss/_fonts.scss",
     "~/assets/scss/_media.scss",
     "~/assets/scss/base.scss",
+    "~/assets/fonts/stylesheet.css",
   ],
+
+  styleResources: {
+    scss: ["~/assets/scss/*.scss"],
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -42,6 +47,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    "@nuxtjs/style-resources"
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
